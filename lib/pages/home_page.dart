@@ -22,17 +22,20 @@ class HomePage extends StatelessWidget {
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        actions: const [
-        // circular avatar not implemented
-          CircleAvatar(
-            backgroundColor: Colors.grey,
-            radius: 80.0,
-            child: Image(
-              height: 120,
-              width: 90,
-              image: AssetImage('assets/images/pic1.jpg'),
-            ),
-          ),
+        actions:  [
+    
+
+CircleAvatar(
+    backgroundColor: Colors.transparent,
+    child: SizedBox(
+    width: 40,
+      height: 40,
+      child: ClipOval(
+        child: Image.asset("assets/images/pic1.jpg",
+      ),
+    ),
+),
+),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -73,6 +76,7 @@ class HomepageBody extends StatelessWidget {
               CategoryButton(text: "Today"),
               CategoryButton(text: "Week"),
               CategoryButton(text: "Month"),
+              
             ],
           ),
           SizedBox(

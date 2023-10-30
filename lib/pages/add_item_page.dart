@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class AddItemsPage extends StatefulWidget {
+  const AddItemsPage({super.key});
+
 
 
   @override
@@ -11,7 +13,6 @@ class AddItemsPage extends StatefulWidget {
 
  
 class _AddItemsPageState extends State<AddItemsPage> {
-  TextEditingController? _taskController = TextEditingController();
   String selectedCategory = "finance";
 
 @override

@@ -42,7 +42,7 @@ CircleAvatar(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AddItemsPage()),
+            MaterialPageRoute(builder: (context) => const AddItemsPage()),
           );
         },
         child: const Icon(Icons.add),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/pages/add_item_page.dart';
 import 'package:to_do_list/reusableWidgets/catagory_bottom.dart';
 import '../reusableWidgets/catagory_card.dart';
-import 'add_item_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ CircleAvatar(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AddItemsPage()),
+            MaterialPageRoute(builder: (context) => AddItemsPage()),
           );
         },
         child: const Icon(Icons.add),

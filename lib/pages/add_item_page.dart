@@ -137,7 +137,14 @@ class _AddItemsPageState extends State<AddItemsPage> {
           ElevatedButton(
             onPressed: () => Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => const AddItemsPage())), 
-            child:  const Text('Add Task', ),
+            child:  const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 Icon(Icons.add),
+                Text('Add Task', ),
+               
+              ],
+            ),
             
            
             ), 

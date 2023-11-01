@@ -71,49 +71,64 @@ class _DetailsPageState extends State<DetailsPage> {
            const SizedBox(
                   height: 28,
                 ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 0.0),
+           Padding(
+            padding: const EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 0.0),
             child: Column(
               children: [
                 ListTile(
+                 
                   tileColor: Colors.white, 
-                  leading: Icon(Icons.radio_button_unchecked,
+                   shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                   ),
+                  leading: const Icon(Icons.radio_button_unchecked,
                   color: Colors.yellow,),
-                  title: Text(
+                  title: const Text(
                     "Money Deposit"
                   ),
-                  trailing: Icon(Icons.done,
+                  trailing: const Icon(Icons.done,
                   color: Colors.yellow,),
+
+                  
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                ListTile(
+                 ListTile(
                   tileColor: Colors.white, 
-                  leading: Icon(Icons.radio_button_unchecked),
-                  title: Text(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                   ),
+                  leading: const Icon(Icons.radio_button_unchecked),
+                  title: const Text(
                     "Pay Tax"
                   ),
                   
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                ListTile(
+                 ListTile(
                   tileColor: Colors.white, 
-                  leading: Icon(Icons.radio_button_unchecked),
-                  title: Text(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                   ),
+                  leading: const Icon(Icons.radio_button_unchecked),
+                  title: const Text(
                     "Repair the car"
                   ),
                 
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                ListTile(
+                 ListTile(
                   tileColor: Colors.white, 
-                  leading: Icon(Icons.radio_button_unchecked),
-                  title: Text(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                   ),
+                  leading: const Icon(Icons.radio_button_unchecked),
+                  title: const Text(
                     "Repair the car"
                   ),
                 

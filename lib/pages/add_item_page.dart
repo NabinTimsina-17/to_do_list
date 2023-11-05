@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class AddItemsPage extends StatefulWidget {
@@ -8,7 +10,7 @@ class AddItemsPage extends StatefulWidget {
 }
 
 class _AddItemsPageState extends State<AddItemsPage> {
-  String selectedCategory = "finance";
+  String selectedCategory = "Finance";
 
   @override
   Widget build(BuildContext context) {
@@ -56,18 +58,26 @@ class _AddItemsPageState extends State<AddItemsPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           ListTile(
-            contentPadding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
+            contentPadding: const EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
             tileColor: const Color.fromARGB(255, 255, 255, 255),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            leading: const Icon(
-              Icons.radio_button_unchecked,
-              color: Color.fromARGB(255, 23, 142, 93),
+            leading:  Radio<String>(
+              value: "Work",
+              groupValue: selectedCategory,
+              onChanged: (value) {
+
+                  selectedCategory=value!;
+                   setState(() {
+                    
+                  });
+          
+              },
             ),
             title: const Text(
               "Work",
@@ -78,14 +88,20 @@ class _AddItemsPageState extends State<AddItemsPage> {
             ),
           ),
           ListTile(
-            contentPadding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
+            contentPadding: const EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
             tileColor: const Color.fromARGB(255, 255, 255, 255),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            leading: const Icon(
-              Icons.radio_button_unchecked,
-              color: Color.fromARGB(255, 32, 24, 193),
+           leading:  Radio<String>(
+              value: "Work",
+              groupValue: selectedCategory,
+              onChanged: (value) {
+                  selectedCategory=value!;
+                  setState(() {
+                    
+                  });
+              },
             ),
             title: const Text(
               "Finance",
@@ -96,14 +112,20 @@ class _AddItemsPageState extends State<AddItemsPage> {
             ),
           ),
           ListTile(
-            contentPadding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
+            contentPadding: const EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
             tileColor: const Color.fromARGB(255, 255, 255, 255),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            leading: const Icon(
-              Icons.radio_button_unchecked,
-              color: Color.fromARGB(255, 127, 39, 215),
+          leading:  Radio<String>(
+              value: "finance",
+              groupValue: selectedCategory.toLowerCase(),
+              onChanged: (value) {
+                selectedCategory=value!;
+                 setState(() {
+                    
+                  });
+              },
             ),
             title: const Text(
               "Personal",
@@ -114,14 +136,20 @@ class _AddItemsPageState extends State<AddItemsPage> {
             ),
           ),
           ListTile(
-            contentPadding: EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
+            contentPadding: const EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
             tileColor: const Color.fromARGB(255, 255, 255, 255),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            leading: const Icon(
-              Icons.radio_button_unchecked,
-              color: Color.fromARGB(255, 20, 20, 202),
+         leading:  Radio<String>(
+              value: "Study",
+              groupValue: selectedCategory,
+              onChanged: (value) {
+                  selectedCategory=value!;
+                   setState(() {
+                    
+                  });
+              },
             ),
             title: const Text(
               "Study",
@@ -135,8 +163,10 @@ class _AddItemsPageState extends State<AddItemsPage> {
             height: 40,
           ),
           ElevatedButton(
-            onPressed: () => Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const AddItemsPage())), 
+            onPressed: () {
+                  log(selectedCategory.toString());
+            },
+            
             child:  const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

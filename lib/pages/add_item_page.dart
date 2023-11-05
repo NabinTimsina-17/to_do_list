@@ -94,7 +94,7 @@ class _AddItemsPageState extends State<AddItemsPage> {
               borderRadius: BorderRadius.circular(10),
             ),
            leading:  Radio<String>(
-              value: "Work",
+              value: "Finance",
               groupValue: selectedCategory,
               onChanged: (value) {
                   selectedCategory=value!;
@@ -118,7 +118,7 @@ class _AddItemsPageState extends State<AddItemsPage> {
               borderRadius: BorderRadius.circular(10),
             ),
           leading:  Radio<String>(
-              value: "finance",
+              value: "personal",
               groupValue: selectedCategory.toLowerCase(),
               onChanged: (value) {
                 selectedCategory=value!;

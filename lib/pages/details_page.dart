@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:to_do_list/pages/add_item_page.dart';
 
 class DetailsPage extends StatefulWidget {
-  const DetailsPage({super.key});
-
+  const DetailsPage({super.key,this.catagory});
+final String? catagory;
   @override
   State<DetailsPage> createState() => _DetailsPageState();
 }
@@ -57,9 +57,9 @@ class _DetailsPageState extends State<DetailsPage> {
                 const SizedBox(
                   width: 10.0,
                 ),
-                const Text(
-                  'Finance',
-                  style: TextStyle(
+                 Text(
+                  widget.catagory!,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 29,
                   ),

@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(235, 210, 200, 200),
       appBar: AppBar(
         leading: const Padding(
-          // ltrb bhanko?
           padding: EdgeInsets.fromLTRB(5, 20, 0, 0),
           child: Icon(
             Icons.menu,
@@ -22,20 +21,19 @@ class HomePage extends StatelessWidget {
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        actions:  [
-    
-
-CircleAvatar(
-    backgroundColor: Colors.transparent,
-    child: SizedBox(
-    width: 40,
-      height: 40,
-      child: ClipOval(
-        child: Image.asset("assets/images/pic1.jpg",
-      ),
-    ),
-),
-),
+        actions: [
+          CircleAvatar(
+            backgroundColor: Colors.transparent,
+            child: SizedBox(
+              width: 40,
+              height: 40,
+              child: ClipOval(
+                child: Image.asset(
+                  "assets/images/pic1.jpg",
+                ),
+              ),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -60,7 +58,7 @@ class HomepageBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.all(20.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment:  CrossAxisAlignment.start,
         children: [
           Text(
             "To Do List",
@@ -76,7 +74,6 @@ class HomepageBody extends StatelessWidget {
               CategoryButton(text: "Today"),
               CategoryButton(text: "Week"),
               CategoryButton(text: "Month"),
-              
             ],
           ),
           SizedBox(
@@ -87,24 +84,33 @@ class HomepageBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                 CatagoryCard(noOfTask: 3, catagory: "Work",),
-                   CatagoryCard(noOfTask: 4, catagory: "Finance",),
+                  CatagoryCard(
+                    noOfTask: 3,
+                    catagory: "Work",
+                  ),
+                  CatagoryCard(
+                    noOfTask: 4,
+                    catagory: "Finance",
+                  ),
                 ],
               ),
-
-            SizedBox(
-              height: 40,
-            ),
-
-
+              SizedBox(
+                height: 40,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  CatagoryCard(noOfTask: 5, catagory: "Personal",),
-                   CatagoryCard(noOfTask: 6, catagory: "Study",),
+                  CatagoryCard(
+                    noOfTask: 5,                                                                      
+                    catagory: "Personal",
+                  ), 
+
+                  CatagoryCard(
+                    noOfTask: 6,
+                    catagory: "Study",
+                  ),
                 ],
               ),
-
             ],
           ),
         ],
@@ -112,4 +118,3 @@ class HomepageBody extends StatelessWidget {
     );
   }
 }
-

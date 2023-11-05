@@ -13,7 +13,9 @@ final String catagory;
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailsPage(),),);
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>  DetailsPage(
+          catagory: catagory,
+        ),),);
       },
       child: Material(
         borderRadius: BorderRadius.circular(20),
